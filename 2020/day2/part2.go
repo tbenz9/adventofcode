@@ -35,16 +35,8 @@ func main() {
 		var high, _ = strconv.Atoi(strings.Split(splits[0], "-")[1])
 		var letter = strings.TrimSuffix(splits[1], ":")
 		var password = strings.Split(splits[2], "")
-		var first = false
-		var second = false
 
-		if password[low-1] == letter {
-			first = true
-		}
-		if password[high-1] == letter {
-			second = true
-		}
-		if first != second {
+		if (password[low-1] == letter) != (password[high-1] == letter) {
 			fmt.Println("bad password", line)
 			count++
 		}
