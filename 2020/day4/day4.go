@@ -17,7 +17,6 @@ func main() {
 	for i := 0; i < len(rows); i++ {
 		for _, field := range fields {
 			if strings.Contains(rows[i], field) {
-				fmt.Println("found a match")
 				count++
 			}
 		}
