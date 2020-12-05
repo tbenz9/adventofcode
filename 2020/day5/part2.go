@@ -29,9 +29,15 @@ func main() {
 			answer = seatID
 		}
 	}
-	//fmt.Println("Answer is:", answer)
-	for _, i := range plane {
-		fmt.Println(i)
+	for x, i := range plane {
+		for y, j := range i {
+			if j == 0 && y != 0 && y != 7 {
+				var before, after = plane[x][y-1], plane[x][y+1]
+				if before != 0 && after != 0 {
+					fmt.Println("Answer is:", before+1)
+				}
+			}
+		}
 	}
 }
 
