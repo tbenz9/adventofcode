@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+// this answer is 1000% times better than mine: https://github.com/mnml/aoc/blob/master/2020/05/2.go
+
 func main() {
 	//	fmt.Println("Day 5 Part 2")
 	input, _ := ioutil.ReadFile("input.txt")
