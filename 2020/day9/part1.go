@@ -21,21 +21,20 @@ func main() {
 	}
 
 	for validEntry(start, numbers) {
-		fmt.Println(numbers[start+5])
 		start++
 	}
-	fmt.Println("bad one is", numbers[start+5])
 
 }
 
 func validEntry(start int, numbers []int) bool {
-	end := start + 4
+	end := start + 24
 	index := end + 1
-	for x := start; x < end; x++ {
-		for y := start; y < end; y++ {
+	for x := start; x <= end; x++ {
+		for y := start; y <= end; y++ {
 			if x == y {
 				continue
 			}
+			//fmt.Println(numbers[x], "+", numbers[y], "==", numbers[index])
 			if numbers[x]+numbers[y] == numbers[index] {
 				return true
 			}
@@ -43,5 +42,6 @@ func validEntry(start int, numbers []int) bool {
 		}
 
 	}
+	fmt.Println("Answer is", numbers[index])
 	return false
 }
