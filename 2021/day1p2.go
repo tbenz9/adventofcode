@@ -33,7 +33,7 @@ func readLines(path string) ([]int, error) {
 }
 
 func main() {
-	fmt.Println("Advent of Code 2021 Day 1 Part 1")
+	fmt.Println("Advent of Code 2021 Day 1 Part 2")
 	lines, err := readLines("day1.input")
 	check(err)
 	count := 0
